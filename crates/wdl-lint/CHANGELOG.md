@@ -7,6 +7,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
+### Fixed
+
+* The “missing set command” warning now highlights only the command keyword instead of the whole block
+
 ## 0.30.0 - 2026-10-29
 
 ### Added
