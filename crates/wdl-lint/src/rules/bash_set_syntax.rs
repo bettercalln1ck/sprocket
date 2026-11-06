@@ -538,7 +538,7 @@ impl Visitor for BashSetSyntax {
 
         let Some(CommandPart::Text(first_chunk)) = section.parts().next() else {
             diagnostics.exceptable_add(
-                missing_set(self.severity, section.span()),
+                missing_set(self.severity, section.keyword().span()),
                 section.inner(),
                 &self.exceptable_nodes(),
             );
@@ -585,7 +585,7 @@ impl Visitor for BashSetSyntax {
         }
 
         diagnostics.exceptable_add(
-            missing_set(self.severity, section.span()),
+            missing_set(self.severity, section.keyword().span()),
             section.inner(),
             &self.exceptable_nodes(),
         );

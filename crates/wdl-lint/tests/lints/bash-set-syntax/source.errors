@@ -1,11 +1,9 @@
 warning[BashSetSyntax]: missing `set` command
    ┌─ tests/lints/bash-set-syntax/source.wdl:95:5
-   │  
-95 │ ╭     command <<<
-96 │ │         echo "Hello, World!"
-97 │ │     >>>
-   │ ╰───────^
-   │  
+   │
+95 │     command <<<
+   │     ^^^^^^^
+   │
    = help: `set` commands should be on the first line of `command` sections
 
 warning[BashSetSyntax]: bad `set` command
@@ -55,13 +53,10 @@ warning[BashSetSyntax]: bad `set` command
 
 warning[BashSetSyntax]: missing `set` command
     ┌─ tests/lints/bash-set-syntax/source.wdl:137:5
-    │  
-137 │ ╭     command <<<
-138 │ │         echo "Hello, World!"
-139 │ │         set -euo pipefail
-140 │ │     >>>
-    │ ╰───────^
-    │  
+    │
+137 │     command <<<
+    │     ^^^^^^^
+    │
     = help: `set` commands should be on the first line of `command` sections
 
 warning[BashSetSyntax]: unnecessary `set` option
@@ -102,12 +97,10 @@ warning[BashSetSyntax]: bad `set` command
 
 warning[BashSetSyntax]: missing `set` command
     ┌─ tests/lints/bash-set-syntax/source.wdl:166:5
-    │  
-166 │ ╭     command <<<
-167 │ │         setcap
-168 │ │     >>>
-    │ ╰───────^
-    │  
+    │
+166 │     command <<<
+    │     ^^^^^^^
+    │
     = help: `set` commands should be on the first line of `command` sections
 
 warning[BashSetSyntax]: bad `set` command
